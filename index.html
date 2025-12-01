@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <div class="header">
+                <h2>Weather by yoga<span class="dot">.</span></h2>
+            </div>
+
+            <div class="content-wrapper">
+                <h3>Cek cuaca kotamu <br>sebelum bepergian.</h3>
+                
+                <div class="search-box">
+                    <input type="text" id="cityInput" placeholder="Masukkan nama kota..." autocomplete="off">
+                    <button onclick="getWeather()">Cari</button>
+                </div>
+
+                <div class="weather-info" id="weatherResult" style="display: none;">
+                    <h1 class="temp">0°c</h1>
+                    <div class="meta-data">
+                        <h2 class="city">Kota</h2>
+                        <p class="description">Keterangan</p>
+                    </div>
+                    
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span>Kelembaban</span>
+                            <p class="humidity">0%</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Angin</span>
+                            <p class="wind">0 km/j</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error" id="errorMessage" style="display: none;">
+                    <p>Kota tidak ditemukan, coba lagi ya.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel" id="bgImage">
+            <div class="overlay-text">
+                <p id="photoCredit">Photo by Unsplash</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
